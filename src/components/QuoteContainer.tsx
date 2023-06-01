@@ -21,7 +21,6 @@ const QuoteContainer = () => {
       );
       const data = await response.data;
       setQuote(data[0]);
-      console.log(Quote)
     };
     randomQuote()
   }, [refreshCount] );
