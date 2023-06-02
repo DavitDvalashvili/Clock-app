@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
-
-
 const QuoteContainer = () => {
   interface QuoteType {
     content: string;
     author: string;
   }
-  
 
-  const [refreshCount, setRefreshCount] = useState<number>(0);  
+  const [refreshCount, setRefreshCount] = useState<number>(0);
   const [Quote, setQuote] = useState<QuoteType | null>(null);
 
   useEffect(() => {
@@ -22,20 +18,23 @@ const QuoteContainer = () => {
       const data = await response.data;
       setQuote(data[0]);
     };
-    randomQuote()
-  }, [refreshCount] );
-
+    randomQuote();
+  }, [refreshCount]);
 
   return (
-    <div className="quote-container">
-      <div>
-      {Quote && <p>{Quote.content}</p>}
-      <img src="./assets/images/icon-refresh.svg" alt="refresh" onClick={() => {
-        setRefreshCount(refreshCount+1);
-      }}/>
+    <div className="text-3 leading-[22px] text-white mb-[160px]">
+      <div className="flex justify-start items-start gap-[16.67px] font-normal" >
+        {Quote && <p>"{Quote.content}"</p>}
+        <img
+          src="./assets/images/icon-refresh.svg"
+          alt="refresh"
+          onClick={() => {
+            setRefreshCount(refreshCount + 1);
+          }}
+        />
       </div>
-      {Quote && <h2>{Quote.author}</h2>}
-        
+      {Quote && <h2 className="mt-2 font-bold 
+      ">{Quote.author}</h2>}
     </div>
   );
 };

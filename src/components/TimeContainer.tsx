@@ -36,9 +36,9 @@ const TimeContainer = (props: DataType) => {
   const [hideInfo, setHideInfo] = useState<boolean>(true);
 
   return (
-    <div>
+    <div className="fontInter bg-red-600 w-[100vw] h-[100vh] px-[26px] pt-8 pb-10">
       {hideInfo && <QuoteContainer />}
-      <div className="greeting">
+      <div className="">
         <img
           src={
             dayTime
