@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const WordTime = async () => {
       const response = await axios.get(
-        "http://worldtimeapi.org/api/timezone/Asia/Tbilisi"
+        "https://worldtimeapi.org/api/timezone/Asia/Tbilisi"
       );
       const data = await response.data;
       setTimeData(data);

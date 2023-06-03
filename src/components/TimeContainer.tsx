@@ -99,7 +99,7 @@ const TimeContainer = (props: DataType) => {
                 ? "./assets/images/icon-arrow-up.svg"
                 : "./assets/images/icon-arrow-down.svg"
             }
-            alt=""
+            alt="arrows"
           />
         </div>
       </div>
