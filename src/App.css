@@ -1,10 +1,43 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
+.infoBoxStyle {
+  @apply mt-10 mb-[-40px] mx-[-26px] px-[26px] pb-12 pt-8 flex 
+    flex-col font-normal text-[10px] leading-[28px] tracking-[2px] 
+    uppercase md:ml-[-64px] md:px-[64px] md:py-[120px] md:flex-row md:mt-[64px]
+    md:justify-between md:items-start md:text-[13px] md:leading-[28px] md:tracking-[2.6px]
+}
+.infoStyle {
+  @apply mt-4 flex justify-between items-center md:flex md:flex-col md:items-start md:mt-[0px];
+}
+.infoPropsStyle {
+  @apply font-bold text-[20px] leading-[24px] capitalize md:text-[48px] md:leading-[48px];
+}
+.timeContainerStyle {
+    @apply h-[100vh]  w-[100vw]  px-[26px] pt-8 pb-10  text-white 
+    bg-[#D8D8D8] bg-no-repeat bg-cover bg-center bg-[rgba(0,0,0,.2)] bg-blend-multiply
+    md:pt-20 md:pl-16 md:pb-[64px]
+}
+.bgDay {
+    @apply bg-mobile-daytime md:bg-tablet-daytime lg:bg-desktop-daytime
+}
+.bgNight {
+    @apply bg-mobile-nighttime  md:bg-tablet-nighttime lg:bg-desktop-nighttime
+}
+
+.infoBgDay {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20.3871px);
+}
+.infoBgNight {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(20.3871px);
+}
+

@@ -23,11 +23,11 @@ const TimeContainer = (props: DataType) => {
 
   //greeting text for the different part of the day
   let dayInterval: string;
-  if (hours > 5 && hours < 12) {
+  if (hours >= 5 && hours < 12) {
     dayInterval = "Good Morning";
-  } else if (hours > 12 && hours < 18) {
+  } else if (hours >= 12 && hours < 18) {
     dayInterval = "Good Afternoon";
-  } else if (hours > 18 && hours < 23) {
+  } else if (hours >= 18 && hours < 23) {
     dayInterval = "Good Evening";
   } else {
     dayInterval = "Good Night";
@@ -36,10 +36,13 @@ const TimeContainer = (props: DataType) => {
   const [hideInfo, setHideInfo] = useState<boolean>(true);
 
   return (
-    <div className="fontInter bg-red-600 w-[100vw] h-[100vh] px-[26px] pt-8 pb-10">
+    <div className={true ? "timeContainerStyle bgDay" 
+    : "timeContainerStyle bgNight"}>
       {hideInfo && <QuoteContainer />}
-      <div className="">
+      <div className="flex gap-[16.44px] font-normal text-[15px] leading-[25px] md:text-[18px] md:leading-[28px]
+      uppercase tracking-[3px] mt-[68px] md:mt-[73px] items-center">
         <img
+         className="w-6 h-6"
           src={
             dayTime
               ? "./assets/images/icon-sun.svg"
@@ -47,21 +50,26 @@ const TimeContainer = (props: DataType) => {
           }
           alt="moon-sun"
         />
-        <span>{dayInterval}</span>
+        <p>{dayInterval} <span className="hidden md:inline-block">IT IS CURRENTLY</span></p>
       </div>
-      <div className="clock">
-        {currentTime}
-        <span>BST</span>
+      <div className=" md:my-[0px] my-4 text-[100px] leading-[100px] md:text-[175px] md:leading-[175px] md:tracking-[-4.375px] font-bold tracking-[-2.5px]">
+        <span className="h-[175px]">{currentTime}</span> 
+        <span className="font-light text-[15px] leading-[28px] tracking-normal ml-[13px] md:text-[32px] md:leading-[28px]">BST</span>
       </div>
+      <div className="text-[15px] leading-[28px] md:text-[18px] font-bold tracking-[3px] md:tracking-[3.6px] md:mb-20 mb-[48px]">
       {props.timezone.replace("Asia/Tbilisi", "Europe/Tbilisi")}
+      </div>
       <div
         onClick={() => {
           setHideInfo(!hideInfo);
         }}
-        className="button"
+        className="w-[115px] md:w-[146px] h-[39px] md:h-[56px] rounded-[28px] bg-white flex justify-between items-center 
+        gap-[15px] p-1 pl-[17px]  md:p-2 md:pl-[21px]"
       >
-        <span>{hideInfo ? "MORE" : "LESS"}</span>
-        <img
+        <span
+        className="font-bold text-3 md:text-4 leading-[14px] md:leading-[28px] text-black  opacity-[50%] uppercase"
+        >{hideInfo ? "MORE" : "LESS"}</span>
+        <img className="w-8 h-8m md:w-10 md:h-10"
           src={
             hideInfo
               ? "./assets/images/icon-arrow-up.svg"
@@ -76,6 +84,7 @@ const TimeContainer = (props: DataType) => {
           day_of_year={props.day_of_year}
           week_number={props.week_number}
           timezone={props.timezone}
+          dayTime={dayTime}
         />
       )}
     </div>
