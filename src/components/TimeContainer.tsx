@@ -36,47 +36,72 @@ const TimeContainer = (props: DataType) => {
   const [hideInfo, setHideInfo] = useState<boolean>(true);
 
   return (
-    <div className={true ? "timeContainerStyle bgDay" 
-    : "timeContainerStyle bgNight"}>
+    <div
+      className={
+        true ? "timeContainerStyle bgDay" : "timeContainerStyle bgNight"
+      }
+    >
       {hideInfo && <QuoteContainer />}
-      <div className="flex gap-[16.44px] font-normal text-[15px] leading-[25px] md:text-[18px] md:leading-[28px]
-      uppercase tracking-[3px] mt-[68px] md:mt-[73px] items-center">
-        <img
-         className="w-6 h-6"
-          src={
-            dayTime
-              ? "./assets/images/icon-sun.svg"
-              : "./assets/images/icon-moon.svg"
-          }
-          alt="moon-sun"
-        />
-        <p>{dayInterval} <span className="hidden md:inline-block">IT IS CURRENTLY</span></p>
-      </div>
-      <div className=" md:my-[0px] my-4 text-[100px] leading-[100px] md:text-[175px] md:leading-[175px] md:tracking-[-4.375px] font-bold tracking-[-2.5px]">
-        <span className="h-[175px]">{currentTime}</span> 
-        <span className="font-light text-[15px] leading-[28px] tracking-normal ml-[13px] md:text-[32px] md:leading-[28px]">BST</span>
-      </div>
-      <div className="text-[15px] leading-[28px] md:text-[18px] font-bold tracking-[3px] md:tracking-[3.6px] md:mb-20 mb-[48px]">
-      {props.timezone.replace("Asia/Tbilisi", "Europe/Tbilisi")}
-      </div>
-      <div
-        onClick={() => {
-          setHideInfo(!hideInfo);
-        }}
-        className="w-[115px] md:w-[146px] h-[39px] md:h-[56px] rounded-[28px] bg-white flex justify-between items-center 
-        gap-[15px] p-1 pl-[17px]  md:p-2 md:pl-[21px]"
-      >
-        <span
-        className="font-bold text-3 md:text-4 leading-[14px] md:leading-[28px] text-black  opacity-[50%] uppercase"
-        >{hideInfo ? "MORE" : "LESS"}</span>
-        <img className="w-8 h-8m md:w-10 md:h-10"
-          src={
-            hideInfo
-              ? "./assets/images/icon-arrow-up.svg"
-              : "./assets/images/icon-arrow-down.svg"
-          }
-          alt=""
-        />
+      <div className="lg:flex lg:justify-between lg:max-w-[1110px] lg:items-end">
+        <div>
+          <div
+            className="flex gap-[16.44px] font-normal text-[15px] leading-[25px] md:text-[18px] md:leading-[28px]
+            uppercase tracking-[3px] mt-[68px] md:mt-[73px] lg:mt-[0px] items-center lg:text-5 lg:tracking-1"
+          >
+            <img
+              className="w-6 h-6"
+              src={
+                dayTime
+                  ? "./assets/images/icon-sun.svg"
+                  : "./assets/images/icon-moon.svg"
+              }
+              alt="moon-sun"
+            />
+            <p>
+              {dayInterval}
+              <span className="hidden md:inline-block">IT IS CURRENTLY</span>
+            </p>
+          </div>
+          <div
+            className=" md:my-[0px] my-4 text-[100px] leading-[100px] md:text-[175px] md:leading-[175px] 
+            md:tracking-[-4.375px] font-bold tracking-[-2.5px] lg:text-[200px] lg:leading-[200px] lg:tracking-[-5px]
+            lg:my-[16px]"
+          >
+            <span className="h-[175px]">{currentTime}</span>
+            <span
+              className="font-light text-[15px] leading-[28px] tracking-normal ml-[13px] md:text-[32px] 
+              md:leading-[28px] lg:text-[40px]"
+            >
+              BST
+            </span>
+          </div>
+          <div
+            className="text-[15px] leading-[28px] md:text-[18px] font-bold tracking-[3px] md:tracking-[3.6px] 
+            md:mb-20 mb-[48px] lg:text-[24px] lg:mb-[0px] "
+          >
+            {props.timezone.replace("Asia/Tbilisi", "Europe/Tbilisi")}
+          </div>
+        </div>
+        <div
+          onClick={() => {
+            setHideInfo(!hideInfo);
+          }}
+          className="w-[115px] md:w-[146px] h-[39px] md:h-[56px] rounded-[28px] bg-white flex justify-between items-center 
+                    gap-[15px] p-1 pl-[17px]  md:p-2 md:pl-[21px]"
+        >
+          <span className="font-bold text-3 md:text-4 leading-[14px] md:leading-[28px] text-black  opacity-[50%] uppercase">
+            {hideInfo ? "MORE" : "LESS"}
+          </span>
+          <img
+            className="w-8 h-8m md:w-10 md:h-10"
+            src={
+              hideInfo
+                ? "./assets/images/icon-arrow-up.svg"
+                : "./assets/images/icon-arrow-down.svg"
+            }
+            alt=""
+          />
+        </div>
       </div>
       {!hideInfo && (
         <Information

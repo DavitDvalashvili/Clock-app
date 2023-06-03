@@ -8,18 +8,18 @@ export interface DataType {
 
 const Information = (props: DataType) => {
   return (
-    <div className={true ? "infoBoxStyle infoBgDay text-[#303030]" : "infoBoxStyle infoBgNight text-[#ffffff]"}>
-      <div className="md:flex md:flex-col md:gap-[49px]">
+    <div className={props.dayTime ? "infoBoxStyle infoBgDay text-[#303030]" : "infoBoxStyle infoBgNight text-[#ffffff]"}>
+      <div className="md:flex md:flex-col md:gap-[49px] lg:gap-[42px] lg:border-r-[1px] lg:border-r-[#303030] lg:pr-[148px]">
         <div className="infoStyle ">
           <span>Current Timezone</span>
-          <span className="infoPropsStyle">{props.timezone}</span>
+          <span className="infoPropsStyle">{props.timezone.replace("Asia/Tbilisi", "Europe/Tbilisi")}</span>
         </div>
         <div  className="infoStyle">
           <span>Day of the year</span>
           <span className="infoPropsStyle">{props.day_of_year}</span>
         </div>
       </div>
-      <div className="md:flex md:flex-col md:gap-[49px]">
+      <div className="md:flex md:flex-col md:gap-[49px] lg:gap-[42px] lg:pl-[94px]">
         <div  className="infoStyle">
           <span>Day of the week</span>
           <span className="infoPropsStyle">{props.day_of_week}</span>

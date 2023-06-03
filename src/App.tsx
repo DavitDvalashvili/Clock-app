@@ -24,7 +24,7 @@ function App() {
     clearInterval(timeIntervalId);
   }, 1000);
   return (
-    <div className="app">
+    <div className="flex justify-center items-center h-[100vh]">
       {timeData && (
         <TimeContainer
           timezone={timeData.timezone}

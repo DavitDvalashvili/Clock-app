@@ -8,22 +8,26 @@
   margin: 0px;
   padding: 0px;
 }
+#root {
+  height: fit-content;
+}
 .infoBoxStyle {
   @apply mt-10 mb-[-40px] mx-[-26px] px-[26px] pb-12 pt-8 flex 
     flex-col font-normal text-[10px] leading-[28px] tracking-[2px] 
     uppercase md:ml-[-64px] md:px-[64px] md:py-[120px] md:flex-row md:mt-[64px]
-    md:justify-between md:items-start md:text-[13px] md:leading-[28px] md:tracking-[2.6px]
+    md:justify-center md:items-start md:text-[13px] md:leading-[28px] md:tracking-[2.6px]
+    lg:mt-[56px] lg:ml-[-165px] lg:px-[165px] lg:py-[74px] lg:text-[15px]
 }
 .infoStyle {
-  @apply mt-4 flex justify-between items-center md:flex md:flex-col md:items-start md:mt-[0px];
+  @apply mt-4 flex justify-between items-center md:flex md:flex-col md:items-start md:mt-[9px];
 }
 .infoPropsStyle {
-  @apply font-bold text-[20px] leading-[24px] capitalize md:text-[48px] md:leading-[48px];
+  @apply font-bold text-[20px] leading-[24px] capitalize md:text-[48px] md:leading-[48px] lg:text-[56px] lg:leading-[68px];
 }
 .timeContainerStyle {
     @apply h-[100vh]  w-[100vw]  px-[26px] pt-8 pb-10  text-white 
     bg-[#D8D8D8] bg-no-repeat bg-cover bg-center bg-[rgba(0,0,0,.2)] bg-blend-multiply
-    md:pt-20 md:pl-16 md:pb-[64px]
+    md:pt-20 md:pl-16 md:pb-[64px] lg:pt-[56px] lg:pl-[165px] lg:pb-[98px] lg:max-w-[1440px] lg:max-h-[800px]
 }
 .bgDay {
     @apply bg-mobile-daytime md:bg-tablet-daytime lg:bg-desktop-daytime
