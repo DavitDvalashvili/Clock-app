@@ -15,8 +15,8 @@
   @apply mt-10 mb-[-40px] mx-[-26px] px-[26px] pb-12 pt-8 flex 
     flex-col font-normal text-[10px] leading-[28px] tracking-[2px] 
     uppercase md:ml-[-64px] md:px-[64px] md:py-[120px] md:flex-row md:mt-[64px]
-    md:justify-center md:items-start md:text-[13px] md:leading-[28px] md:tracking-[2.6px]
-    lg:mt-[56px] lg:ml-[-165px] lg:px-[165px] lg:py-[74px] lg:text-[15px];
+    md:justify-center md:gap-[81px] md:items-start md:text-[13px] md:leading-[28px] md:tracking-[2.6px]
+    lg:mt-[56px] lg:ml-[-165px] lg:px-[165px] lg:py-[74px] lg:text-[15px] lg:justify-around;
 }
 .infoStyle {
   @apply mt-4 flex justify-between items-center md:flex md:flex-col md:items-start md:mt-[9px];

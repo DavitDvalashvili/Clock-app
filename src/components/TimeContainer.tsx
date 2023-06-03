@@ -38,7 +38,7 @@ const TimeContainer = (props: DataType) => {
   return (
     <div
       className={
-        true ? "timeContainerStyle bgDay" : "timeContainerStyle bgNight"
+        dayTime ? "timeContainerStyle bgDay" : "timeContainerStyle bgNight"
       }
     >
       {hideInfo && <QuoteContainer />}
@@ -87,7 +87,7 @@ const TimeContainer = (props: DataType) => {
             setHideInfo(!hideInfo);
           }}
           className="w-[115px] md:w-[146px] h-[39px] md:h-[56px] rounded-[28px] bg-white flex justify-between items-center 
-                    gap-[15px] p-1 pl-[17px]  md:p-2 md:pl-[21px]"
+          gap-[15px] p-1 pl-[17px]  md:p-2 md:pl-[21px] cursor-pointer"
         >
           <span className="font-bold text-3 md:text-4 leading-[14px] md:leading-[28px] text-black  opacity-[50%] uppercase">
             {hideInfo ? "MORE" : "LESS"}
