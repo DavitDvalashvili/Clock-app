@@ -59,7 +59,7 @@ const TimeContainer = (props: DataType) => {
             />
             <p>
               {dayInterval}
-              <span className="hidden md:inline-block">IT IS CURRENTLY</span>
+              < span className="hidden md:inline-block">IT IS CURRENTLY</span>
             </p>
           </div>
           <div
