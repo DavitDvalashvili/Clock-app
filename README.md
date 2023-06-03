@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://clock-app-ebon.vercel.app/)
-- Live Site URL: [Add live site URL here](https://job-listings-with-filtering-eight-kappa.vercel.app/)
+- Solution URL: [Add solution URL here](https://github.com/DavitDvalashvili/Clock-app)
+- Live Site URL: [Add live site URL here](https://clock-app-ebon.vercel.app/)
 
 ### Getting Started
 
