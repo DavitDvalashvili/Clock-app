@@ -23,10 +23,10 @@ const Information = (props: DataType) => {
       <div className="md:flex md:flex-col md:gap-[49px] lg:gap-[42px]">
         <div  className="infoStyle">
           <span>Day of the week</span>
-          <span className="infoPropsStyle">{props.day_of_week}</span>
+          <span className="infoPropsStyle">{props.day_of_week === 0 ? 7 : props.day_of_week}</span>
         </div>
         <div  className="infoStyle">
-          <span>Day of the week</span>
+          <span>Week number</span>
           <span className="infoPropsStyle">{props.week_number}</span>
         </div>
       </div>
