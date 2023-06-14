@@ -48,7 +48,7 @@ Users should be able to:
 1. First of all you need to clone app repository from github:
 
 ```
-git clone https://github.com/DavitDvalashvili/Job-listings-with-filtering.git
+git clone https://github.com/DavitDvalashvili/Clock-app.git
 ```
 
 2. Next step requires install all the dependencies.
